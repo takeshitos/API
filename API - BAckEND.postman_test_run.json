@@ -1,0 +1,206 @@
+{
+	"id": "cc81816a-6e63-4791-82be-acec7d5b29e6",
+	"name": "API - BAckEND",
+	"timestamp": "2024-12-10T19:21:20.005Z",
+	"collection_id": "37870269-8d4551bf-a99e-416b-b565-ea9fc12aeba5",
+	"folder_id": 0,
+	"environment_id": "37870269-c49fa7bb-6d63-456b-acb4-7a33cc4ff1a0",
+	"totalPass": 15,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-10T19:21:19.414Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1d4425f2-4888-49fe-b479-8c56d19b605f",
+			"name": "lsita tasks",
+			"url": "http://localhost:3000/tasks",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response has the required fields - id, title, description, and completed": true,
+				"Id is a non-negative integer": true,
+				"Title and description are non-empty strings": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, title, description, and completed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title and description are non-empty strings": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response has the required fields - id, title, description, and completed": true,
+					"Id is a non-negative integer": true,
+					"Title and description are non-empty strings": true
+				}
+			]
+		},
+		{
+			"id": "94cd6ead-b9f4-4500-92b4-8606e2398d1c",
+			"name": "add task",
+			"url": "http://localhost:3000/tasks",
+			"time": 2,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required fields - id, title, description, and completed": true,
+				"Title is a non-empty string": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, title, description, and completed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required fields - id, title, description, and completed": true,
+					"Title is a non-empty string": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "9c56e31b-6a3f-4cd3-9f42-becb0a2ee7b8",
+			"name": "att task",
+			"url": "http://localhost:3000/tasks/4",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Response body has the required properties": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body has the required properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Response body has the required properties": true
+				}
+			]
+		},
+		{
+			"id": "2cbdf0f0-e6d2-4dbe-b000-c1f0a6719fb9",
+			"name": "DEL task",
+			"url": "http://localhost:3000/tasks/4",
+			"time": 2,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response status code is 204": true,
+				"Response time is within an acceptable range": true,
+				"Response body is empty after deletion": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is empty after deletion": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 204": true,
+					"Response time is within an acceptable range": true,
+					"Response body is empty after deletion": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 11,
+	"collection": {
+		"requests": [
+			{
+				"id": "1d4425f2-4888-49fe-b479-8c56d19b605f",
+				"method": "GET"
+			},
+			{
+				"id": "94cd6ead-b9f4-4500-92b4-8606e2398d1c",
+				"method": "POST"
+			},
+			{
+				"id": "9c56e31b-6a3f-4cd3-9f42-becb0a2ee7b8",
+				"method": "PUT"
+			},
+			{
+				"id": "2cbdf0f0-e6d2-4dbe-b000-c1f0a6719fb9",
+				"method": "DELETE"
+			}
+		]
+	}
+}
